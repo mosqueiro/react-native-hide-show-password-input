@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import PropTypes from "prop-types";
-import { TextField } from "react-native-material-textfield";
+// import { TextField } from "react-native-material-textfield";
+// import { Textfield } from 'react-native-material-kit';
+import MaskInput from 'react-native-mask-input';
 
 const PasswordInputText = ({
   iconSize,
@@ -26,11 +28,13 @@ const PasswordInputText = ({
 
   return (
     <View style={style}>
-      <TextField
+      <MaskInput
         {...rest}
         ref={passReference}
         secureTextEntry={isPassword}
-        label={label}
+        autoCorrect={false}
+        style={styles.inputText}
+        // label={label}
       />
       <Icon
         style={styles.icon}
@@ -44,10 +48,26 @@ const PasswordInputText = ({
 };
 
 const styles = StyleSheet.create({
+  inputText: {
+    // padding: 5,
+    // paddingLeft: 0,
+    marginTop: 0,
+    fontSize: 18,
+    fontFamily: 'Montserrat-Medium',
+    color: '#222',
+    borderWidth: 1,
+    borderColor: '#cdcdcd',
+    // borderColor: "#005F53",
+    padding: 12,
+    borderRadius: 5,
+    // borderBottomWidth: 1,
+    // borderColor: '#0F5F54',
+    // fontWeight: 'bold',
+  },
   icon: {
     position: "absolute",
-    top: 33,
-    right: 0,
+    top: 12,
+    right: 12,
   },
 });
 
