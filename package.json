@@ -1,6 +1,6 @@
 {
   "name": "@zcorefinance/react-native-hide-show-password-input",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "React-Native Component For Password Show/Hide",
   "main": "index.js",
   "repository": {
